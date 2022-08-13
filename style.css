@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.btn {
+  border: 4px white solid;
+  color: white;
+  text-decoration: none;
+  line-height: 3rem;
+}
+
+.left .btn:hover{
+  background-color: rgba(84, 84, 234, 1);
+}
+
+.right .btn:hover {
+  background-color: #234122;
+}
+
+.split {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: grid;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: flex 0.9s ease-in-out;
+}
+
+.split h1 {
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.split a {
+  z-index: 1;
+}
+
+.left {
+  background-image: url('images/ps5.jpg');
+  height: 100%;
+  background-size: cover;
+  }
+
+.right {
+  background-image: url('images/xbox.jpg');
+  height: 100%;
+  background-size: cover;
+  /* width: 50%; */
+}
+
+.left::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50% ;
+  background-color: rgba(84, 84, 234, 0.7);
+  left: 0;
+  transition: width 0.9s ease-in-out;
+}
+
+.right::before {
+  content: '';
+  height: 100%;
+  width: 50%;
+  background-color: rgba(43, 43, 43, 0.7);
+  position: absolute;
+  right: 0;
+  transition: width 0.9s ease-in-out;
+}
+
+.left:hover {
+  flex-grow: 3;
+  z-index: 1;
+}
+
+.left:hover::before {
+  width: 75%;
+}
+
+.right:hover {
+  flex-grow: 3;
+  z-index: 1;
+}
+
+.right:hover::before {
+  width: 75%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 4.5rem;
+  align-items: center;
+}
+
+footer a {
+  margin: 2rem;
+}
